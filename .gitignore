@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+*.js
+*.js.map
+
+# Express
+dist/
+
+# Testes
+coverage/
+
+# Inversify
+inversify.config.js
+
+# Outros arquivos e diretórios específicos do seu projeto
+# (Adicione conforme necessário)
