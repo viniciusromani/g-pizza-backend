@@ -15,5 +15,9 @@ coverage/
 # Inversify
 inversify.config.js
 
+# dotenv
+.env
+
 # Outros arquivos e diretórios específicos do seu projeto
 # (Adicione conforme necessário)
+

@@ -8,4 +8,4 @@ export abstract class Router {
 }
 
 // EXPORTS BELOW HERE
-export * from './auth-router'
+export * from './auth.router'

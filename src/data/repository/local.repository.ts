@@ -1,4 +1,4 @@
-import { LocalProviderCity } from "@domain/entity/city"
+import { LocalProviderCity } from "@data/model"
 import { readFile } from "../provider/json"
 
 export interface LocalRepository {

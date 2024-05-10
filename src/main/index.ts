@@ -1,4 +1,3 @@
-// import { ExternalRepository, ExternalRepositoryImpl } from '@data/repository'
 import express from 'express'
 
 require('dotenv').config()

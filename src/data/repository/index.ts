@@ -1,2 +1,2 @@
-export * from './external-repository'
-export * from './local-repository'
+export * from './external.repository'
+export * from './local.repository'
