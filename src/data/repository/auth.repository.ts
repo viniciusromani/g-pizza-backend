@@ -8,7 +8,8 @@ export interface AuthRepository {
 
 export class AuthRepositoryImpl implements AuthRepository {
   async createToken(payload: JWTAuth): Promise<string> {
-    return jwt.sign(payload, "process.env.JWT_SECRET")
+    return jwt.sign(payload, process.env.JWT_SECRET)
+    // return jwt.sign(payload, "process.env.JWT_SECRET")
   }
 
   async validateToken(token: string): Promise<JWTAuth> {
