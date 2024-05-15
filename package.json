@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tests": "jest",
-    "dev": "ts-node -r tsconfig-paths/register src/main/index.ts"
+    "dev": "ts-node --require tsconfig-paths/register src/main/index.ts"
   },
   "keywords": [],
   "author": "",

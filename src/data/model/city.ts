@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const localProviderCitySchema = z.object({
+const citySchema = z.object({
   id: z.coerce.string(),
   ibge_code: z.coerce.string(),
   name: z.string(),
@@ -8,4 +8,4 @@ const localProviderCitySchema = z.object({
   enabled: z.boolean()
 })
 
-export type LocalProviderCity = z.infer<typeof localProviderCitySchema>
+export type CityModel = z.infer<typeof citySchema>

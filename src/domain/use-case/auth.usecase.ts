@@ -1,9 +1,7 @@
-import { UseCase } from ".";
 import { ExternalRepository, LocalRepository } from "@data/repository";
+import { UseCase } from ".";
 
-export interface AuthUseCase extends UseCase<boolean, string> { }
-
-export class AuthUseCaseImpl implements AuthUseCase {
+export class AuthUseCase implements UseCase<boolean, string> {
   constructor(
     private readonly externalRepository: ExternalRepository,
     private readonly localRepository: LocalRepository

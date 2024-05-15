@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-const jwtAuthSchema = z.object({
+const jwtSchema = z.object({
   city: z.string()
 })
 
-export type JWTAuth = z.infer<typeof jwtAuthSchema>
+export type JWTModel = z.infer<typeof jwtSchema>

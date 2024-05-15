@@ -13,9 +13,9 @@ export class AuthController {
     try {
       const { city } = req.body
       const isValid = this.useCase.execute(city)
-
+      console.log(isValid)
     } catch (err) {
-      
+      console.log('is error')
     }
   }
 }

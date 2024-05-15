@@ -1,12 +1,12 @@
-import { LocalProviderCity } from "@data/model"
+import { CityModel } from "@data/model"
 import { readFile } from "../provider/json"
 
 export interface LocalRepository {
-  getCities(): Promise<LocalProviderCity[]>
+  getCities(): Promise<CityModel[]>
 }
 
 export class LocalRepositoryImpl implements LocalRepository {
-  async getCities(): Promise<LocalProviderCity[]> {
-    return await readFile<LocalProviderCity[]>('../../../data/cities.json')
+  async getCities(): Promise<CityModel[]> {
+    return await readFile<CityModel[]>('../../../data/cities.json')
   }
 }
