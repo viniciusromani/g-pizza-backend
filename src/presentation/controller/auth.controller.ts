@@ -14,6 +14,11 @@ export class AuthController {
     const { zipcode } = req.body;
     const isValid = await this.useCase.execute(zipcode);
     if (!isValid) next(new UnauthorizedError("Invalid credentials"));
-    // retornar response de sucesso (pesquisar como é melhor fazer)
+    /**
+     * retornar response de sucesso (pesquisar como é melhor fazer)
+     * uma ideia é extender express.Response pra conseguir ter:
+     * res.sendSuccess({ ... });
+     * res.sendError({ ... }, status);
+     */
   }
 };

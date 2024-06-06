@@ -13,7 +13,7 @@ export class AuthUseCase implements UseCase<boolean, string> {
     
     const enabled = cities
       .filter(city => city.enabled)
-      .map(city => city.ibge_code);
+      .map(city => String(city.ibge_code));
     
     return enabled.includes(ibge);
   };
