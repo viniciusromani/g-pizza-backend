@@ -4,11 +4,10 @@ export abstract class CustomError extends Error {
   readonly logging: boolean;
 
   constructor(message: string, logging: boolean) {
-    console.log('chamei o super')
     super(message);
 
     this.logging = logging;
-
+    
     Error.captureStackTrace(this);
     Object.setPrototypeOf(this, CustomError.prototype);
   };
@@ -23,7 +22,6 @@ export class BadRequestError extends CustomError {
   public description: string;
   
   constructor(message?: string, logging?: boolean, description?: string) {
-    console.log('hello from here')
     super(message || "Bad Request", logging || true);
 
     this.statusCode = 400;
@@ -43,7 +41,7 @@ export class InternalServerError extends CustomError {
     this.statusCode = 500;
     this.description = description || "Internal Server Error";
 
-    Object.setPrototypeOf(this, BadRequestError.prototype);
+    Object.setPrototypeOf(this, InternalServerError.prototype);
   };
 };
 
@@ -57,6 +55,6 @@ export class UnauthorizedError extends CustomError {
     this.statusCode = 401;
     this.description = description || "Unauthorized";
 
-    Object.setPrototypeOf(this, BadRequestError.prototype);
+    Object.setPrototypeOf(this, UnauthorizedError.prototype);
   };
 };

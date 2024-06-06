@@ -1,6 +1,6 @@
 import express from "express";
 
-import { errorHandler } from "@presentation/middleware";
+import { errorHandler, validator } from "@presentation/middleware";
 
 
 require("dotenv").config();

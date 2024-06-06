@@ -11,9 +11,9 @@ class ValidatorHandler {
       } catch (err) {
         if (err instanceof ZodError) {
           const messages = err.errors.map(error => `${error.path.join('.')} is ${error.message}`);
-          throw new BadRequestError(messages.join('; '));
+          next(new BadRequestError(messages.join('; ')));
         } else {
-          throw new InternalServerError();
+          next(new InternalServerError());
         };
       };
     };

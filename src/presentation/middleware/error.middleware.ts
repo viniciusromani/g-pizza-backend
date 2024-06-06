@@ -1,17 +1,15 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import { CustomError } from "@presentation/view-model";
 
 class ErrorHandler {
-  public async handle(error: Error, req: Request, res: Response) {
+  public async handle(error: Error, req: Request, res: Response, next: NextFunction) {
     /**
      * Logging
      * TODO: Improve it by logging stack trace and so on
      */
-    console.log('estou aqui')
     console.error(error);
 
     if (error instanceof CustomError) {
-      console.log('oiii')
       return res
         .status(error.statusCode)
         .send({
