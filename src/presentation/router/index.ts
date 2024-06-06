@@ -1,11 +1,11 @@
-import express from 'express'
+import express from "express";
 export abstract class Router {
   constructor(
     protected readonly router = express.Router()
-  ) { }
+  ) { };
   
-  public get() { return this.router }
+  public instance = this.router;
 }
 
 // EXPORTS BELOW HERE
-export * from './auth.router'
+export * from "./auth.router";

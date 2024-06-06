@@ -6,5 +6,5 @@
  * change the framework (express.js)
  */
 
-export * from './auth.controller'
-export * from './restaurants.controller'
+export * from "./auth.controller";
+export * from "./restaurants.controller";
